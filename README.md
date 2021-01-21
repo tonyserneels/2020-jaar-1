@@ -4,3 +4,4 @@
 - Bart Duisters
 
 ## Cursisten
+- Simone :P

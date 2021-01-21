@@ -7,5 +7,5 @@
 - Yoeri
 - Marvi Hendriks
 - Simone :P
-- Michelle
 - Romy
+- Domenico

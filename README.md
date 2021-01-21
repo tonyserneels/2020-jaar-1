@@ -5,3 +5,4 @@
 
 ## Cursisten
 - Marvi Hendriks
+- Simone :P

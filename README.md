@@ -6,3 +6,4 @@
 
 ## Cursisten
 - Simone :P
+- Tony $erneel$

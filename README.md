@@ -7,5 +7,9 @@
 - Yoeri
 - Marvi Hendriks
 - Simone :P
+- Marco De Roeck
+- Michelle
 - Romy
 - Jorg
+- Tony $erneel$
+- Ian

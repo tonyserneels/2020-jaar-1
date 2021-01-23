@@ -8,7 +8,7 @@
 - Marvi Hendriks
 - Simone :P
 - Domenico
-- Marco De Roeck
+- Marco 
 - Michelle
 - Romy
 - Jorg

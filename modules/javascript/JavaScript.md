@@ -398,3 +398,88 @@ class Persoon {
 const persoon = new Persoon('Bart', 'Duisters');
 console.log(persoon.volledigeNaam()); // Bart Duisters
 ```
+
+## static
+
+Soms is het interessant om geen instantie te moeten maken van een class en
+toch de methodes aan te kunnen roepen. Hiervoor maken we gebruik van een
+voorbeeld met een class genaamd 'Utils' (van het Engels 'utilities', Nederlands 'gereedschap').
+
+```js
+let a = 3;
+let b = 4;
+let grootsteGetal;
+
+if (a > b) {
+  grootsteGetal = a;
+} else {
+  grootsteGetal = b;
+}
+console.log(`Het grootste getal is: ${a}`);
+
+a = 4;
+b = 5;
+
+if (a > b) {
+  grootsteGetal = a;
+} else {
+  grootsteGetal = b;
+}
+console.log(`Het grootste getal is: ${b}`);
+```
+
+Er wordt twee keer hetzelfde gedaan, dit kan dus in een functie gestoken worden.
+
+```js
+function grootsteGetal(a, b) {
+  if (a > b) {
+    return a;
+  } 
+  return b;
+}
+
+let a = 3;
+let b = 4;
+let grootsteGetal;
+
+console.log(`Het grootste getal is: ${grootsteGetal(a, b)}`);
+
+a = 4;
+b = 5;
+
+console.log(`Het grootste getal is: ${grootsteGetal(a, b)}`);
+```
+
+Op dit moment is er maar één JavaScript-bestand. Maar stel dat er in een nieuw
+bestand opnieuw logica moet zijn om te bepalen wat het grootste getal is,
+dan zou er opnieuw dezelfde functie geschreven moeten worden.
+
+In plaats van altijd code/logica te schrijven op het moment dat er gekend
+moet zijn welk nummer groter is, kan dit in een class gestoken worden als method.
+Omdat dit vaak gebruikt moet worden, is het interessant om dit als static method
+toe te voegen. Dit zorgt ervoor dat er geen instantie van de class gemaakt
+moet worden om gebruik te maken van de method.
+
+```js
+// Gebruik even de verbeelding, Utils staat in een apart JavaScript-bestand.
+class Utils {
+
+  // Nieuw keyword: static
+  // Dit maakt het mogelijk om de functie op te roepen via: Utils.grootsteGetal(a, b);
+  static grootsteGetal(a, b) {
+    if (a > b) {
+      return a;
+    }
+    return b;
+  }
+
+}
+
+// Opnieuw in de verbeelding, dit is het tweede JavaScript-bestand.
+const a = 3, b = 5;
+console.log(`Het grootste getal is: ${Utils.grootsteGetal(a,b)}`);
+
+// Opnieuw in de verbeelding, dit is het derde JavaScript-bestand.
+const x = 4, y = 6;
+console.log(`Het grootste getal is: ${Utils.grootsteGetal(x, y)}`);
+```

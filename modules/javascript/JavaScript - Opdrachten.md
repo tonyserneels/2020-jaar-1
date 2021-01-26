@@ -148,3 +148,31 @@ const opel = {
     type: 'Manta'
 }
 ```
+
+# Class - static
+
+## Schrijven
+
+Maak een class genaamd `Calculator`.
+
+Voorzie vier `static methods`:
+- som
+- verschil
+- delen
+- vermenigvuldigen
+
+Voorzie een `static property`:
+- PI (met als waarde het nummer 3.141592)
+
+Vertrek vanuit onderstaande code:
+```js
+class Calculator {
+
+}
+
+console.log(Calculator.som(3 + 3)); // Dit moet 6 loggen
+console.log(Calculator.verschil(3 - 2)); // Dit moet 1 loggen
+console.log(Calculator.delen(6 / 2)); // Dit moet 3 loggen
+console.log(Calculator.vermenigvuldigen(3 * 3)); // Dit moet 9 loggen
+console.log(Calculator.PI); // Dit moet 3.141592 loggen
+```

@@ -14,7 +14,5 @@
 - Jorg
 - Tony $erneel$
 - Ian
-
 - Angelique
-
 - Arne

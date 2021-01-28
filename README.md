@@ -4,6 +4,7 @@
 - Bart Duisters
 
 ## Cursisten
+
 - Yoeri
 - Marvi Hendriks
 - Simone :P

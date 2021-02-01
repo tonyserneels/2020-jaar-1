@@ -176,3 +176,126 @@ console.log(Calculator.delen(6, 2)); // Dit moet 3 loggen
 console.log(Calculator.vermenigvuldigen(3, 3)); // Dit moet 9 loggen
 console.log(Calculator.PI); // Dit moet 3.141592 loggen
 ```
+
+# Class - extends & super
+
+## Schrijven
+
+### Oefening 1
+
+#### Deel 1
+
+Refactor onderstaande code zodat er gebruik gemaakt wordt van classes.
+Zorg voor een class genaamd 'Cursist' en een class genaamd 'Docent'.
+
+```js
+const cursist1 = {
+    naam: 'Yoeri',
+    begroeting: () => {
+        return `Hallo, ik ben ${this.naam}!`
+    }
+}
+
+const cursist2 = {
+    naam: 'Marvi Hendriks',
+    begroeting: () => {
+        return `Hallo, ik ben ${this.naam}!`
+    }
+}
+
+const cursist3 = {
+    naam: 'Simone :P',
+    begroeting: () => {
+        return `Hallo, ik ben ${this.naam}!`
+    }
+}
+
+const cursist4 = {
+    naam: 'Domenico',
+    begroeting: () => {
+        return `Hallo, ik ben ${this.naam}!`
+    }
+}
+
+const cursist5 = {
+    naam: 'Marco',
+    begroeting: () => {
+        return `Hallo, ik ben ${this.naam}!`
+    }
+}
+
+const cursist6 = {
+    naam: 'Michelle',
+    begroeting: () => {
+        return `Hallo, ik ben ${this.naam}!`
+    }
+}
+
+const cursist7 = {
+    naam: 'Romy',
+    begroeting: () => {
+        return `Hallo, ik ben ${this.naam}!`
+    }
+}
+
+const cursist8 = {
+    naam: 'Jorg',
+    begroeting: () => {
+        return `Hallo, ik ben ${this.naam}!`
+    }
+}
+
+const cursist9 = {
+    naam: 'Tony $erneel$',
+    begroeting: () => {
+        return `Hallo, ik ben ${this.naam}!`
+    }
+}
+
+const cursist10 = {
+    naam: 'Ian',
+    begroeting: () => {
+        return `Hallo, ik ben ${this.naam}!`
+    }
+}
+
+const cursist11 = {
+    naam: 'Angelique',
+    begroeting: () => {
+        return `Hallo, ik ben ${this.naam}!`
+    }
+}
+
+const cursist12 = {
+    naam: 'Arne',
+    begroeting: () => {
+        return `Hallo, ik ben ${this.naam}!`
+    }
+}
+
+const docent1 = {
+    naam: 'Bart',
+    motto: '25 is grappiger dan 24',
+    begroeting: () => {
+        return `Hallo, ik ben ${this.naam}!`;
+    },
+    motto: () => {
+        return `Mijn motto is: ${this.motto}`;
+    }
+}
+
+const docent2 = {
+    naam: 'Mark',
+    motto: '24 is grappiger dan 25',
+    begroeting: () => {
+        return `Hallo, ik ben ${this.naam}!`;
+    },
+    motto: () => {
+        return `Mijn motto is: ${this.motto}`;
+    }
+}
+``` 
+
+#### Deel 2
+
+Ga verder op de oplossing uit deel 1, zorg voor een

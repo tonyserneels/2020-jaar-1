@@ -483,3 +483,111 @@ console.log(`Het grootste getal is: ${Utils.grootsteGetal(a,b)}`);
 const x = 4, y = 6;
 console.log(`Het grootste getal is: ${Utils.grootsteGetal(x, y)}`);
 ```
+
+## extends & super
+
+Stel dat er code is waarin verschillende classes voorzien zijn om verschillende
+dieren aan te maken.
+
+```js
+class Leeuw {
+  naam;
+  leeftijd;
+
+  constructor(naam, leeftijd) {
+    this.naam = naam;
+    this.leeftijd = leeftijd;
+  }
+
+  eet() {
+    return `${this.naam} is aan het eten.`;
+  }
+
+  slaap() {
+    return `${this.naam} is aan het slapen.`;
+  }
+
+  jagen() {
+    return `${this.naam} is aan het jagen.`;
+  }
+}
+
+class Hond {
+  naam;
+  leeftijd;
+  roepnaam;
+
+  constructor(naam, leeftijd, roepnaam) {
+    this.naam = naam;
+    this.leeftijd = leeftijd;
+    this.roepnaam = roepnaam;
+  }
+
+  eet() {
+    return `${this.naam} is aan het eten.`;
+  }
+
+  slaap() {
+    return `${this.naam} is aan het slapen.`;
+  }
+}
+
+class Olifant {
+  naam;
+  leeftijd;
+
+  constructor(naam, leeftijd) {
+    this.naam = naam;
+    this.leeftijd = leeftijd;
+  }
+
+  eet() {
+    return `${this.naam} is aan het eten.`;
+  }
+
+  slaap() {
+    return `${this.naam} is aan het slapen.`;
+  }
+
+  eetVeel() {
+    return `${this.eet()} En blijft eten.`
+  }
+}
+
+const leeuw = new Leeuw('Leeuwtje', 13);
+const hond = new Hond('Samson', 8);
+const olifant = new Olifant('Dumbo', 9);
+
+console.log(leeuw.eet()); // Leeuwtje is aan het eten.
+console.log(leeuw.jagen()); // Leeuwtje is aan het jagen.
+console.log(leeuw.slaap()); // Leeuwtje is aan het slapen.
+
+console.log(hond.eet()); // Samson is aan het eten.
+console.log(hond.slaap()); // Samson is aan het slapen.
+
+console.log(olifant.eet()); // Dumbo is aan het eten.
+console.log(olifant.eetVeel()); // Dumbo is aan het eten. En blijft eten.
+console.log(olifant.slaap()); // Dumbo is aan het slapen.
+```
+
+Elke class heeft twee properties die gelijkend zijn: naam en leeftijd
+Elke class heeft twee functies die gelijkend zijn: eet() en slaap()
+
+Als developer is het niet leuk om voor elke class opnieuw dezelfde property te moeten typen
+en om opnieuw dezelfde functie te moeten typen.
+
+Er is iets voorzien waardoor het maar één keer getypt moet worden, het keyword `extends`
+en het gebruik van `super`.
+
+Nieuwe termen: super class en sub class.
+
+Een class die van een andere class `extends`, noemen we een sub class (ook wel `child` genoemd).
+De class waarvan `extends` wordt, noemen we een super class (ook wel `parent` genoemd).
+
+In het Nederlands kan `extends` verwoord worden door `overerving`.
+
+Onderstaande code doet exact hetzelfde:
+
+```js
+// Live in de les
+```

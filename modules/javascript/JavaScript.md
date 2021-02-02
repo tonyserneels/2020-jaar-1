@@ -141,6 +141,7 @@ if (voorwaarde) {
 ```
 
 ### if - else if - else
+
 ```js
 const voorwaarde = 300;
 
@@ -159,27 +160,27 @@ if (voorwaarde < 100) {
 ### switch
 
 ```js
-const naam = 'John Duck';
+const naam = "John Duck";
 
 switch (naam) {
-  case 'Mark':
+  case "Mark":
     // Dit codeblok wordt NIET uitgevoerd
-    console.log('Hallo Mark!');
+    console.log("Hallo Mark!");
     break; // Stop met het uitvoeren van de switch
-  case 'Bart':
-  case 'Barry':
+  case "Bart":
+  case "Barry":
     // Dit codeblok wordt NIET uitgevoerd
     // Twee cases, beide cases voeren dit codeblok uit
-    console.log('Hallo Bart of Barry!');
+    console.log("Hallo Bart of Barry!");
     break;
-  case 'John Duck':
+  case "John Duck":
     // Dit codeblok wordt uitgevoerd
-    console.log('Hallo John Duck!');
+    console.log("Hallo John Duck!");
     break;
   default:
     // Dit codeblok wordt NIET uitgevoerd
-    console.log('Hallo vreemdeling!');
-    // Geen break nodig, de switch stopt sowieso met uitvoeren op dit punt
+    console.log("Hallo vreemdeling!");
+  // Geen break nodig, de switch stopt sowieso met uitvoeren op dit punt
 }
 ```
 
@@ -207,7 +208,7 @@ while (i < 10) {
   console.log(`Dit is lus ${i}`);
   i++;
 }
-``` 
+```
 
 ### do while
 
@@ -219,7 +220,7 @@ do {
   // de tiende bevat heeft i waarde 9
   console.log(`Dit is lus ${i}`);
   i++;
-} while (i < 10)
+} while (i < 10);
 ```
 
 ## Objecten
@@ -228,20 +229,20 @@ Bijna alles is een object in JavaScript. Het is dus belangrijk om objecten door 
 
 ```js
 const persoon = {
-    voornaam: 'John',
-    achternaam: 'Duck',
-    volledigeNaam: function() {
-        return this.voornaam + ' ' + this.achternaam;
-    }
-}
+  voornaam: "John",
+  achternaam: "Duck",
+  volledigeNaam: function () {
+    return this.voornaam + " " + this.achternaam;
+  },
+};
 
 const persoon2 = {
-    voornaam: 'Bart',
-    achternaam: 'Duisters',
-    volledigeNaam: () => {
-        return `${this.voornaam} ${this.achternaam}`;
-    }
-}
+  voornaam: "Bart",
+  achternaam: "Duisters",
+  volledigeNaam: () => {
+    return `${this.voornaam} ${this.achternaam}`;
+  },
+};
 
 console.log(persoon.volledigeNaam());
 console.log(persoon2.volledigeNaam());
@@ -249,30 +250,30 @@ console.log(persoon2.volledigeNaam());
 
 Bovenstaande variabelen `persoon` en `persoon2` hebben beide een object toegekend gekregen. Beide objecten hebben drie properties (Nederlands: eigenschappen), namelijk `voornaam`, `achternaam` en `volledigeNaam`.
 
-Ook al is de syntax verschillend voor het toekennen van een functie aan de property `volledigeNaam` en  ook al is de syntax verschillend voor het teruggeven van de samengevoegde variabelen `voornaam` en `achternaam`, dit doet achterliggend identiek hetzelfde.
+Ook al is de syntax verschillend voor het toekennen van een functie aan de property `volledigeNaam` en ook al is de syntax verschillend voor het teruggeven van de samengevoegde variabelen `voornaam` en `achternaam`, dit doet achterliggend identiek hetzelfde.
 
 ## this
 
 ```js
 const persoon = {
-    voornaam: 'Bart',
-    achternaam: 'Duisters',
-    volledigeNaam: () => {
-        return `${this.voornaam} ${this.achternaam}`;
-    }
-}
+  voornaam: "Bart",
+  achternaam: "Duisters",
+  volledigeNaam: () => {
+    return `${this.voornaam} ${this.achternaam}`;
+  },
+};
 ```
 
 In bovenstaand voorbeeld wordt er gebruik gemaakt van `this`. `this` verwijst naar `this object` (Nederlands: DIT object). `this` verwijst in bovenstaand voorbeeld naar de variabele `persoon`, er zou dus ook geschreven kunnen worden:
 
 ```js
 const persoon = {
-    voornaam: 'Bart',
-    achternaam: 'Duisters',
-    volledigeNaam: () => {
-        return `${persoon.voornaam} ${persoon.achternaam}`;
-    }
-}
+  voornaam: "Bart",
+  achternaam: "Duisters",
+  volledigeNaam: () => {
+    return `${persoon.voornaam} ${persoon.achternaam}`;
+  },
+};
 ```
 
 # class
@@ -293,59 +294,59 @@ dit dat er tien keer een property toegevoegd moet worden.
 
 ```js
 const persoon = {
-    voornaam: 'John',
-    achternaam: 'Duck',
-    volledigeNaam: () => {
-        return `${this.voornaam} ${this.achternaam}`;
-    }
-}
+  voornaam: "John",
+  achternaam: "Duck",
+  volledigeNaam: () => {
+    return `${this.voornaam} ${this.achternaam}`;
+  },
+};
 
 const persoon2 = {
-    voornaam: 'Bart',
-    achternaam: 'Duisters',
-    volledigeNaam: () => {
-        return `${this.voornaam} ${this.achternaam}`;
-    }
-}
+  voornaam: "Bart",
+  achternaam: "Duisters",
+  volledigeNaam: () => {
+    return `${this.voornaam} ${this.achternaam}`;
+  },
+};
 
 const persoon3 = {
-    voornaam: 'Mark',
-    achternaam: 'Duisters',
-    volledigeNaam: () => {
-        return `${this.voornaam} ${this.achternaam}`;
-    }
-}
+  voornaam: "Mark",
+  achternaam: "Duisters",
+  volledigeNaam: () => {
+    return `${this.voornaam} ${this.achternaam}`;
+  },
+};
 ```
 
 Om te zorgen dat er niet voor elke persoon opnieuw een object met alle properties aangemaakt moet worden. Kan er een 'class' aangemaakt worden.
 
 ```js
 class Persoon {
-    voornaam = 'Anoniempje';
-    achternaam;
+  voornaam = "Anoniempje";
+  achternaam;
 
-    volledigeNaam() {
-        return `${this.voornaam} ${this.achternaam}`;
-    }
+  volledigeNaam() {
+    return `${this.voornaam} ${this.achternaam}`;
+  }
 }
 
 const persoon = new Persoon();
-persoon.voornaam = 'John';
-persoon.achternaam = 'Duck'; 
+persoon.voornaam = "John";
+persoon.achternaam = "Duck";
 
 const persoon2 = new Persoon();
-persoon2.voornaam = 'Bart';
-persoon2.achternaam = 'Duisters'; 
+persoon2.voornaam = "Bart";
+persoon2.achternaam = "Duisters";
 
 console.log(persoon.volledigeNaam());
 console.log(persoon2.volledigeNaam());
 ```
 
 Properties gedefinieerd binnen het codeblok van een `class`, worden gedefinieerd zonder `const` of `let`.
-Functies (ook wel `methodes` genoemd) gedefinieerd binnen het codeblok van een `class`, worden gedefinieerd zonder sleutelwoord `function`. 
+Functies (ook wel `methodes` genoemd) gedefinieerd binnen het codeblok van een `class`, worden gedefinieerd zonder sleutelwoord `function`.
 
-Wat afgeleid kan worden uit bovenstaande code, is dat `new Persoon()`, een object teruggeeft, met de properties `voornaam`, `achternaam` en de methode `volledigeNaam`. 
-Met het sleutelwoord 'new' wordt er een nieuwe instantie gemaakt van de `class`, genaamd `Persoon`. Elke instantie van de `class` `Persoon` krijgt standaard een property `voornaam` met als standaardwaarde (Engels: default value) `'Anoniempje'`, een property `achternaam` zonder standaardwaarde (de waarde is dus `undefined`) en een methode `volledigeNaam()`. 
+Wat afgeleid kan worden uit bovenstaande code, is dat `new Persoon()`, een object teruggeeft, met de properties `voornaam`, `achternaam` en de methode `volledigeNaam`.
+Met het sleutelwoord 'new' wordt er een nieuwe instantie gemaakt van de `class`, genaamd `Persoon`. Elke instantie van de `class` `Persoon` krijgt standaard een property `voornaam` met als standaardwaarde (Engels: default value) `'Anoniempje'`, een property `achternaam` zonder standaardwaarde (de waarde is dus `undefined`) en een methode `volledigeNaam()`.
 
 Na het toekennen van een instantie van een `class` aan een variabele, kunnen de properties en methodes aangesproken worden alsof het een object is (omdat het achterliggend ook effectief een object is), met de puntnotatie. Dit wordt bijvoorbeeld gedaan om waarden toe te kennen aan `persoon.voornaam` en `persoon.achternaam`.
 
@@ -355,20 +356,20 @@ Om te zorgen dat er niet altijd eerst een instantie aangemaakt moet worden om ve
 
 ```js
 class Persoon {
-    voornaam;
-    achternaam;
-    
-    constructor() {
-        /*
-        * Code in dit codeblok wordt uitgevoerd op het moment
-        * dat 'new Persoon()' wordt aangeroepen.
-        */
-       console.log('Ik word uitgevoerd'); 
-    }
+  voornaam;
+  achternaam;
 
-    volledigeNaam() {
-        return `${this.voornaam} ${this.achternaam}`;
-    }
+  constructor() {
+    /*
+     * Code in dit codeblok wordt uitgevoerd op het moment
+     * dat 'new Persoon()' wordt aangeroepen.
+     */
+    console.log("Ik word uitgevoerd");
+  }
+
+  volledigeNaam() {
+    return `${this.voornaam} ${this.achternaam}`;
+  }
 }
 
 const persoon = new Persoon(); // De constructor-methode wordt uitgevoerd
@@ -382,20 +383,20 @@ Aan deze speciale methode kunnen ook parameters meegegeven worden.
 
 ```js
 class Persoon {
-    voornaam;
-    achternaam;
-    
-    constructor(parameter1, parameter2) {
-       this.voornaam = parameter1;
-       this.achternaam = parameter2;
-    }
+  voornaam;
+  achternaam;
 
-    volledigeNaam() {
-        return `${this.voornaam} ${this.achternaam}`;
-    }
+  constructor(parameter1, parameter2) {
+    this.voornaam = parameter1;
+    this.achternaam = parameter2;
+  }
+
+  volledigeNaam() {
+    return `${this.voornaam} ${this.achternaam}`;
+  }
 }
 
-const persoon = new Persoon('Bart', 'Duisters');
+const persoon = new Persoon("Bart", "Duisters");
 console.log(persoon.volledigeNaam()); // Bart Duisters
 ```
 
@@ -434,7 +435,7 @@ Er wordt twee keer hetzelfde gedaan, dit kan dus in een functie gestoken worden.
 function grootsteGetal(a, b) {
   if (a > b) {
     return a;
-  } 
+  }
   return b;
 }
 
@@ -463,7 +464,6 @@ moet worden om gebruik te maken van de method.
 ```js
 // Gebruik even de verbeelding, Utils staat in een apart JavaScript-bestand.
 class Utils {
-
   // Nieuw keyword: static
   // Dit maakt het mogelijk om de functie op te roepen via: Utils.grootsteGetal(a, b);
   static grootsteGetal(a, b) {
@@ -472,15 +472,16 @@ class Utils {
     }
     return b;
   }
-
 }
 
 // Opnieuw in de verbeelding, dit is het tweede JavaScript-bestand.
-const a = 3, b = 5;
-console.log(`Het grootste getal is: ${Utils.grootsteGetal(a,b)}`);
+const a = 3,
+  b = 5;
+console.log(`Het grootste getal is: ${Utils.grootsteGetal(a, b)}`);
 
 // Opnieuw in de verbeelding, dit is het derde JavaScript-bestand.
-const x = 4, y = 6;
+const x = 4,
+  y = 6;
 console.log(`Het grootste getal is: ${Utils.grootsteGetal(x, y)}`);
 ```
 
@@ -550,13 +551,13 @@ class Olifant {
   }
 
   eetVeel() {
-    return `${this.eet()} En blijft eten.`
+    return `${this.eet()} En blijft eten.`;
   }
 }
 
-const leeuw = new Leeuw('Leeuwtje', 13);
-const hond = new Hond('Samson', 8);
-const olifant = new Olifant('Dumbo', 9);
+const leeuw = new Leeuw("Leeuwtje", 13);
+const hond = new Hond("Samson", 8);
+const olifant = new Olifant("Dumbo", 9);
 
 console.log(leeuw.eet()); // Leeuwtje is aan het eten.
 console.log(leeuw.jagen()); // Leeuwtje is aan het jagen.
@@ -589,5 +590,65 @@ In het Nederlands kan `extends` verwoord worden door `overerving`.
 Onderstaande code doet exact hetzelfde:
 
 ```js
-// Live in de les
+class Dier {
+  naam;
+  leeftijd;
+
+  constructor(naam, leeftijd) {
+    this.naam = naam;
+    this.leeftijd = leeftijd;
+  }
+
+  eet() {
+    return `${this.naam} is aan het eten.`;
+  }
+
+  slaap() {
+    return `${this.naam} is aan het slapen.`;
+  }
+}
+
+class Leeuw extends Dier {
+  constructor(naam, leeftijd) {
+    super(naam, leeftijd);
+  }
+
+  jagen() {
+    return `${this.naam} is aan het jagen.`;
+  }
+}
+
+class Hond extends Dier {
+  roepnaam;
+
+  constructor(naam, leeftijd, roepnaam) {
+    super(naam, leeftijd);
+    this.roepnaam = roepnaam;
+  }
+}
+
+class Olifant extends Dier {
+  constructor(naam, leeftijd) {
+    super(naam, leeftijd);
+  }
+
+  eetVeel() {
+    return `${super.eet()} En blijft eten.`;
+  }
+}
+
+const leeuw = new Leeuw("Leeuwtje", 13);
+const hond = new Hond("Samson", 8);
+const olifant = new Olifant("Dumbo", 9);
+
+console.log(leeuw.eet()); // Leeuwtje is aan het eten.
+console.log(leeuw.jagen()); // Leeuwtje is aan het jagen.
+console.log(leeuw.slaap()); // Leeuwtje is aan het slapen.
+
+console.log(hond.eet()); // Samson is aan het eten.
+console.log(hond.slaap()); // Samson is aan het slapen.
+
+console.log(olifant.eet()); // Dumbo is aan het eten.
+console.log(olifant.eetVeel()); // Dumbo is aan het eten. En blijft eten.
+console.log(olifant.slaap()); // Dumbo is aan het slapen.
 ```

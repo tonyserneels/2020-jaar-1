@@ -303,3 +303,17 @@ Ga verder op de oplossing uit deel 1, zorg voor een algemene class genaamd `Pers
 Zowel de class `Cursist` en `Docent` zullen overerven van `Persoon`.
 
 Zet alle gemeenschappelijke properties en methodes in de `super class`.
+
+#### Deel 3
+
+Ga verder op de oplossing uit deel 2.
+
+In plaats van aparte instanties van elke class, wil ik een `array` met instanties hebben.
+
+Gebruik iteratie om alle begroeting van alle instanties te loggen.
+
+Tip:
+```js
+const cursisten = [];
+cursisten.push(new Cursist('Bart'));
+```

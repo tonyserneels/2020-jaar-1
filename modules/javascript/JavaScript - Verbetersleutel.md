@@ -315,3 +315,268 @@ console.log(Calculator.delen(6, 2)); // Dit moet 3 loggen
 console.log(Calculator.vermenigvuldigen(3,  3)); // Dit moet 9 loggen
 console.log(Calculator.PI); // Dit moet 3.141592 loggen
 ```
+
+# Class - extends & super
+
+## Schrijven
+
+### Oefening 1
+
+#### Deel 1
+
+Refactor onderstaande code zodat er gebruik gemaakt wordt van classes.
+Zorg voor een class genaamd 'Cursist' en een class genaamd 'Docent'.
+
+```js
+const cursist1 = {
+  naam: "Yoeri",
+  begroeting: function () {
+    return `Hallo, ik ben ${this.naam}!`;
+  },
+};
+
+const cursist2 = {
+  naam: "Marvi Hendriks",
+  begroeting: function () {
+    return `Hallo, ik ben ${this.naam}!`;
+  },
+};
+
+const cursist3 = {
+  naam: "Simone :P",
+  begroeting: function () {
+    return `Hallo, ik ben ${this.naam}!`;
+  },
+};
+
+const cursist4 = {
+  naam: "Domenico",
+  begroeting: function () {
+    return `Hallo, ik ben ${this.naam}!`;
+  },
+};
+
+const cursist5 = {
+  naam: "Marco",
+  begroeting: function () {
+    return `Hallo, ik ben ${this.naam}!`;
+  },
+};
+
+const cursist6 = {
+  naam: "Michelle",
+  begroeting: function () {
+    return `Hallo, ik ben ${this.naam}!`;
+  },
+};
+
+const cursist7 = {
+  naam: "Romy",
+  begroeting: function () {
+    return `Hallo, ik ben ${this.naam}!`;
+  },
+};
+
+const cursist8 = {
+  naam: "Jorg",
+  begroeting: function () {
+    return `Hallo, ik ben ${this.naam}!`;
+  },
+};
+
+const cursist9 = {
+  naam: "Tony $erneel$",
+  begroeting: function () {
+    return `Hallo, ik ben ${this.naam}!`;
+  },
+};
+
+const cursist10 = {
+  naam: "Ian",
+  begroeting: function () {
+    return `Hallo, ik ben ${this.naam}!`;
+  },
+};
+
+const cursist11 = {
+  naam: "Angelique",
+  begroeting: function () {
+    return `Hallo, ik ben ${this.naam}!`;
+  },
+};
+
+const cursist12 = {
+  naam: "Arne",
+  begroeting: function () {
+    return `Hallo, ik ben ${this.naam}!`;
+  },
+};
+
+const docent1 = {
+  naam: "Bart",
+  motto: "25 is grappiger dan 24",
+  begroeting: function () {
+    return `Hallo, ik ben ${this.naam}!`;
+  },
+  motto: function () {
+    return `Mijn motto is: ${this.motto}`;
+  },
+};
+
+const docent2 = {
+  naam: "Mark",
+  motto: "24 is grappiger dan 25",
+  begroeting: function () {
+    return `Hallo, ik ben ${this.naam}!`;
+  },
+  motto: function () {
+    return `Mijn motto is: ${this.motto}`;
+  },
+};
+```
+
+Oplossing:
+
+```js
+class Cursist {
+  naam;
+
+  constructor(naam) {
+    this.naam = naam;
+  }
+
+  begroeting() {
+    return `Hallo, ik ben ${this.naam}!`;
+  }
+}
+
+class Docent {
+  naam;
+  motto;
+
+  constructor(naam, motto) {
+    this.naam = naam;
+    this.motto = motto;
+  }
+
+  begroeting() {
+    return `Hallo, ik ben ${this.naam}!`;
+  }
+
+  getMotto() {
+    return `Mijn motto is: ${this.motto}`;
+  }
+}
+
+const cursist1 = new Cursist("Yoeri");
+const cursist2 = new Cursist("Marci Hendriks");
+const cursist3 = new Cursist("Simone :p");
+const cursist4 = new Cursist("Domenico");
+const cursist5 = new Cursist("Marco");
+const cursist6 = new Cursist("Michelle");
+const cursist7 = new Cursist("Romy");
+const cursist8 = new Cursist("Jorg");
+const cursist9 = new Cursist("Tony $erneel$");
+const cursist10 = new Cursist("Ian");
+const cursist11 = new Cursist("Angelique");
+const cursist12 = new Cursist("Arne");
+
+const docent1 = new Docent("Bart", "25 is grappiger dan 24.");
+const docent2 = new Docent("Mark", "24 is grappiger dan 25.");
+
+console.log(cursist1.begroeting());
+console.log(cursist2.begroeting());
+console.log(cursist3.begroeting());
+console.log(cursist4.begroeting());
+console.log(cursist5.begroeting());
+console.log(cursist6.begroeting());
+console.log(cursist7.begroeting());
+console.log(cursist8.begroeting());
+console.log(cursist9.begroeting());
+console.log(cursist10.begroeting());
+console.log(cursist11.begroeting());
+console.log(cursist12.begroeting());
+
+console.log(docent1.begroeting());
+console.log(docent1.getMotto());
+console.log(docent2.begroeting());
+console.log(docent2.getMotto());
+```
+
+#### Deel 2
+
+Ga verder op de oplossing uit deel 1, zorg voor een algemene class genaamd `Persoon`.
+
+Zowel de class `Cursist` en `Docent` zullen overerven van `Persoon`.
+
+Zet alle gemeenschappelijke properties en methodes in de `super class`.
+<br/>
+<br/>
+Oplossing:
+
+```js
+class Persoon {
+  naam;
+
+  constructor(naam) {
+    this.naam = naam;
+  }
+
+  begroeting() {
+    return `Hallo, ik ben ${this.naam}!`;
+  }
+}
+
+class Cursist extends Persoon {
+  constructor(naam) {
+    super(naam);
+  }
+}
+
+class Docent extends Persoon {
+  motto;
+
+  constructor(naam, motto) {
+    super(naam);
+    this.motto = motto;
+  }
+
+  getMotto() {
+    return `Mijn motto is: ${this.motto}`;
+  }
+}
+
+const cursist1 = new Cursist("Yoeri");
+const cursist2 = new Cursist("Marci Hendriks");
+const cursist3 = new Cursist("Simone :p");
+const cursist4 = new Cursist("Domenico");
+const cursist5 = new Cursist("Marco");
+const cursist6 = new Cursist("Michelle");
+const cursist7 = new Cursist("Romy");
+const cursist8 = new Cursist("Jorg");
+const cursist9 = new Cursist("Tony $erneel$");
+const cursist10 = new Cursist("Ian");
+const cursist11 = new Cursist("Angelique");
+const cursist12 = new Cursist("Arne");
+
+const docent1 = new Docent("Bart", "25 is grappiger dan 24.");
+const docent2 = new Docent("Mark", "24 is grappiger dan 25.");
+
+console.log(cursist1.begroeting());
+console.log(cursist2.begroeting());
+console.log(cursist3.begroeting());
+console.log(cursist4.begroeting());
+console.log(cursist5.begroeting());
+console.log(cursist6.begroeting());
+console.log(cursist7.begroeting());
+console.log(cursist8.begroeting());
+console.log(cursist9.begroeting());
+console.log(cursist10.begroeting());
+console.log(cursist11.begroeting());
+console.log(cursist12.begroeting());
+
+console.log(docent1.begroeting());
+console.log(docent1.getMotto());
+console.log(docent2.begroeting());
+console.log(docent2.getMotto());
+```

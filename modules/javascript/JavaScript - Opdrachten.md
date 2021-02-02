@@ -298,4 +298,8 @@ const docent2 = {
 
 #### Deel 2
 
-Ga verder op de oplossing uit deel 1, zorg voor een
+Ga verder op de oplossing uit deel 1, zorg voor een algemene class genaamd `Persoon`.
+
+Zowel de class `Cursist` en `Docent` zullen overerven van `Persoon`.
+
+Zet alle gemeenschappelijke properties en methodes in de `super class`.

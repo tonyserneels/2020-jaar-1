@@ -193,84 +193,84 @@ Zorg voor een class genaamd 'Cursist' en een class genaamd 'Docent'.
 ```js
 const cursist1 = {
   naam: "Yoeri",
-  begroeting: () => {
+  begroeting: function () {
     return `Hallo, ik ben ${this.naam}!`;
   },
 };
 
 const cursist2 = {
   naam: "Marvi Hendriks",
-  begroeting: () => {
+  begroeting: function () {
     return `Hallo, ik ben ${this.naam}!`;
   },
 };
 
 const cursist3 = {
   naam: "Simone :P",
-  begroeting: () => {
+  begroeting: function () {
     return `Hallo, ik ben ${this.naam}!`;
   },
 };
 
 const cursist4 = {
   naam: "Domenico",
-  begroeting: () => {
+  begroeting: function () {
     return `Hallo, ik ben ${this.naam}!`;
   },
 };
 
 const cursist5 = {
   naam: "Marco",
-  begroeting: () => {
+  begroeting: function () {
     return `Hallo, ik ben ${this.naam}!`;
   },
 };
 
 const cursist6 = {
   naam: "Michelle",
-  begroeting: () => {
+  begroeting: function () {
     return `Hallo, ik ben ${this.naam}!`;
   },
 };
 
 const cursist7 = {
   naam: "Romy",
-  begroeting: () => {
+  begroeting: function () {
     return `Hallo, ik ben ${this.naam}!`;
   },
 };
 
 const cursist8 = {
   naam: "Jorg",
-  begroeting: () => {
+  begroeting: function () {
     return `Hallo, ik ben ${this.naam}!`;
   },
 };
 
 const cursist9 = {
   naam: "Tony $erneel$",
-  begroeting: () => {
+  begroeting: function () {
     return `Hallo, ik ben ${this.naam}!`;
   },
 };
 
 const cursist10 = {
   naam: "Ian",
-  begroeting: () => {
+  begroeting: function () {
     return `Hallo, ik ben ${this.naam}!`;
   },
 };
 
 const cursist11 = {
   naam: "Angelique",
-  begroeting: () => {
+  begroeting: function () {
     return `Hallo, ik ben ${this.naam}!`;
   },
 };
 
 const cursist12 = {
   naam: "Arne",
-  begroeting: () => {
+  begroeting: function () {
     return `Hallo, ik ben ${this.naam}!`;
   },
 };
@@ -278,10 +278,10 @@ const cursist12 = {
 const docent1 = {
   naam: "Bart",
   motto: "25 is grappiger dan 24",
-  begroeting: () => {
+  begroeting: function () {
     return `Hallo, ik ben ${this.naam}!`;
   },
-  motto: () => {
+  getMotto: function () {
     return `Mijn motto is: ${this.motto}`;
   },
 };
@@ -289,10 +289,10 @@ const docent1 = {
 const docent2 = {
   naam: "Mark",
   motto: "24 is grappiger dan 25",
-  begroeting: () => {
+  begroeting: function () {
     return `Hallo, ik ben ${this.naam}!`;
   },
-  motto: () => {
+  getMotto: function () {
     return `Mijn motto is: ${this.motto}`;
   },
 };
@@ -343,12 +343,12 @@ const cursisten = [
   { naam: "Tony $erneel$" },
   { naam: "Ian" },
   { naam: "Angelique" },
-  { naam: "Arne" }
+  { naam: "Arne" },
 ];
 
 const docenten = [
   { naam: "Bart", motto: "25 is grappiger dan 24" },
-  { naam: "Mark", motto: "24 is grappiger dan 25" }
+  { naam: "Mark", motto: "24 is grappiger dan 25" },
 ];
 ```
 

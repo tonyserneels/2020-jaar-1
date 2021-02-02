@@ -244,13 +244,16 @@ const persoon2 = {
   },
 };
 
-console.log(persoon.volledigeNaam());
-console.log(persoon2.volledigeNaam());
+console.log(persoon.volledigeNaam()); // Dit print "John Duck"
+console.log(persoon2.volledigeNaam()); // Dit print "undefined undefined" - BELANGRIJK!
 ```
 
 Bovenstaande variabelen `persoon` en `persoon2` hebben beide een object toegekend gekregen. Beide objecten hebben drie properties (Nederlands: eigenschappen), namelijk `voornaam`, `achternaam` en `volledigeNaam`.
 
-Ook al is de syntax verschillend voor het toekennen van een functie aan de property `volledigeNaam` en ook al is de syntax verschillend voor het teruggeven van de samengevoegde variabelen `voornaam` en `achternaam`, dit doet achterliggend identiek hetzelfde.
+Er is geen verschil in de `return` statement van beide functies, ze geven beide een geconcateneerde (samengevoegde) string terug.
+
+Er is **wel** een verschil in het toekennen van een anonieme functie `function () {}` en het toekennen van een anonieme arrow functie `() => {}`.
+De arrow function **weet niet wat this. is**. Er moet dus gebruik gemaakt worden van een normale anonieme functie om te zorgen dat `this.` gekend is.
 
 ## this
 
@@ -258,7 +261,7 @@ Ook al is de syntax verschillend voor het toekennen van een functie aan de prope
 const persoon = {
   voornaam: "Bart",
   achternaam: "Duisters",
-  volledigeNaam: () => {
+  volledigeNaam: function () {
     return `${this.voornaam} ${this.achternaam}`;
   },
 };
@@ -270,7 +273,7 @@ In bovenstaand voorbeeld wordt er gebruik gemaakt van `this`. `this` verwijst na
 const persoon = {
   voornaam: "Bart",
   achternaam: "Duisters",
-  volledigeNaam: () => {
+  volledigeNaam: function () {
     return `${persoon.voornaam} ${persoon.achternaam}`;
   },
 };
@@ -296,7 +299,7 @@ dit dat er tien keer een property toegevoegd moet worden.
 const persoon = {
   voornaam: "John",
   achternaam: "Duck",
-  volledigeNaam: () => {
+  volledigeNaam: function () {
     return `${this.voornaam} ${this.achternaam}`;
   },
 };
@@ -304,7 +307,7 @@ const persoon = {
 const persoon2 = {
   voornaam: "Bart",
   achternaam: "Duisters",
-  volledigeNaam: () => {
+  volledigeNaam: function () {
     return `${this.voornaam} ${this.achternaam}`;
   },
 };
@@ -312,7 +315,7 @@ const persoon2 = {
 const persoon3 = {
   voornaam: "Mark",
   achternaam: "Duisters",
-  volledigeNaam: () => {
+  volledigeNaam: function () {
     return `${this.voornaam} ${this.achternaam}`;
   },
 };

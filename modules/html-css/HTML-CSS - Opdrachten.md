@@ -124,6 +124,35 @@ Er is gevraagd om een layout te voorzien om een recept te tonen.
 - Voeg een hoofding (zelfde grootte als die van "Ingrediënten"), met als content
   "Bereidingswijze".
   Voeg een geordende lijst toe met de stappen om het gerecht te maken.
+  
+  <h1>Pasta di Mama</h1>
+<img src="https://images.smulweb.nl/recepten/201603/1457883535/low_res/oh3915p202-spaghetti-tomato-sauce-x.jpg"/>
+    <h2>Ingrediënten</h2>
+    <ul>
+        <li>125 gr. spekblokjes</li>
+        <li>2 uien</li>
+        <li>2 tenen knoflook (meer mag altijd)</li>
+        <li>2 winterpeen</li>
+        <li>2 stengels bleekselderij</li>
+        <li>1/2 courgette</li>
+        <li>3 el. olijfolie</li>
+        <li>2 tl. gedroogde oregano</li>
+        <li>500 gr. gehakt</li>
+        <li>6 á 7 trostomaten</li>
+        <li>1 blikje tomatenpuree</li>
+        <li>350 ml. kraanwater</li>
+        <li>15 gr. basilicum</li>
+        <li>parmezaanse kaas</li>
+    </ul>
+    <h2>Bereidingswijze</h2>
+    <ol>
+        <li>Snijd alle groenten in blokjes, niet te fijn</li>
+        <li>Zet een grote pan op het vuur en doe olijfolie, spekblokjes en oregano erin en bak het spek goudbruin.</li>
+        <li>Doe de groenten in de pan, en laat die 7 minuten meebakken tot ze zacht zijn.</li>
+        <li>Roer de tomatenpuree er door, laat even een minuutje meebakken en doe vervolgens de tomaten en het gekat erbij.</li>
+        <li>etc.</li>
+    </ol>
+
 
 ## Opdracht 3
 

@@ -86,7 +86,7 @@ Om dit voorbeeld als webapagina te zien:
 - kopieer bovenstaande HTML en plak het als inhoud van het aangemaakte HTML-bestand
 - sla het bestand op en open het in een webbrowser
 
-![voorbeeld-1](assets/voorbeeld-1.png)
+![voorbeeld-1](assets/voorbeeld-1.jpeg)
 
 # DOCTYPE
 
@@ -419,7 +419,7 @@ HTML-elementen hebben standaard een `display`-waarde. Er zijn twee mogelijke waa
 
 Het plaatsen van twee block-elementen onder elkaar of naast elkaar in het .html-bestand heeft niks te maken met hoe het getoond wordt in de browser. Ze worden onder elkaar getoond in de browser.
 
-Het plaatsen van twee inline-elementen onder elkaar of naast elkaar in het .html-bestand heeft niks te maken met hoe het getoond wordt in de browser. Ze worden naast elkaar getoond in de browser.3
+Het plaatsen van twee inline-elementen onder elkaar of naast elkaar in het .html-bestand heeft niks te maken met hoe het getoond wordt in de browser. Ze worden naast elkaar getoond in de browser.
 
 ## Block
 
@@ -648,7 +648,7 @@ te komen.
 ```html
 <h1>Hoofding 1 met h1 element</h1>
 <div>Hoofding 1 met CSS</div>
-<div style="font-size: 28px; font-weight: 700;">Hoofding 1 met CSS</div>
+<div style="font-size: 32px; font-weight: 700;">Hoofding 1 met CSS</div>
 ```
 
 ![voorbeeld-11](assets/voorbeeld-11.jpeg)
@@ -677,7 +677,7 @@ Er zijn drie manieren om CSS te koppelen aan een .html-bestand: `inline`, `inter
     <!-- Interne CSS -->
     <style>
       div {
-        font-size: 28px;
+        font-size: 32px;
         color: red;
       }
     </style>
